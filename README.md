@@ -1,10 +1,8 @@
-# CacheIsKing
+# CacheCreek
 
-<a href="https://github.com/Carthage/Carthage/issues/179">
-    <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
-</a>
+### Forked from [CacheIsKing]()
 
-`CacheIsKing` is a simple cache that allows you to store any item, including objects, pure Swift structs, enums (with associated values), etc. Simply put, it's designed to act like an `NSCache` for everything, including Swift variables.
+`CacheCreek` provides an an LRU cache that allows you to store any item, including objects, pure Swift structs, enums (with associated values), etc. Simply put, it's designed to act like an `NSCache` for everything, including Swift variables.
 
 ## Features
 
@@ -25,16 +23,16 @@
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
 
-Because `CacheIsKing ` is written in Swift, you must use frameworks.
+Because `CacheCreek` is written in Swift, you must use frameworks.
 
-To integrate `CacheIsKing ` into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate `CacheCreek` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'CacheIsKing'
+pod 'CacheCreek'
 ```
 
 Then, run the following command:
@@ -48,18 +46,18 @@ $ pod install
 Add this to your `Cartfile`:
 
 ```
-github "nuudles/CacheIsKing"
+github "samsonjs/CacheCreek"
 ```
 
 ## Usage
 
-Simply use the `KingCache` class similar to how you'd use a `NSCache`. Using the `setItem` and `itemForKey` methods allow you to use type inference to get the values you want.
+Simply use the `LRUCache` class similar to how you'd use a `NSCache`. Using the `setItem` and `itemForKey` methods allow you to use type inference to get the values you want.
 
 ```swift
-let cache = KingCache()
-cache.setItem(123, forKey: "123")
+let cache = LRUCache()
+cache.set(item: 123, forKey: "123")
 
-if let item: Int = cache.itemForKey(456) {
+if let item: Int = cache.item(forKey: 456) {
 	doSomethingWithItem(item)
 }
 ```
@@ -67,7 +65,7 @@ if let item: Int = cache.itemForKey(456) {
 You can also use subscripts to set/get items from the cache. Unfortunately since Swift doesn't support subscript methods with generics yet, you'll have to cast your items as necessary. Also currently only `String`, `Int`, and `Float` keys are supported:
 
 ```swift
-let cache = KingCache()
+let cache = LRUCache()
 cache["123"] = 123
 
 if let item = cache[456] as? Int {
@@ -75,10 +73,10 @@ if let item = cache[456] as? Int {
 }
 ```
 
-The `KingCache` also has a `countLimit` property, which allows you to set the maximum number of items in the cache. It currently evicts randomly until the `countLimit` is met.
+The `LRUCache` also has a `countLimit` property, which allows you to set the maximum number of items in the cache.
 
 ```swift
-let cache = KingCache()
+let cache = LRUCache()
 cache.countLimit = 2
 
 cache[123] = 123
@@ -90,5 +88,9 @@ print("\(cache.count)") // shows a count of 2
 
 ## TODO
 
-- Refine eviction algorithm (currently evicts randomly)
 - Update with better subscript support once Swift supports subscripts with generics
+
+
+# License
+
+[MIT License](https://sjs.mit-license.org)

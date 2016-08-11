@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30D75C271C57CE1400F4E62D /* CacheIsKing.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D75C261C57CE1400F4E62D /* CacheIsKing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30D75C2E1C57CEC500F4E62D /* KingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C2D1C57CEC500F4E62D /* KingCache.swift */; };
-		30D75C371C57D17400F4E62D /* CacheIsKing.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D75C361C57D17400F4E62D /* CacheIsKing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30D75C3C1C57D1A300F4E62D /* KingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C2D1C57CEC500F4E62D /* KingCache.swift */; };
-		30D75C441C57D2CA00F4E62D /* CacheIsKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C431C57D2CA00F4E62D /* CacheIsKingTests.swift */; };
-		30D75C461C57D2CA00F4E62D /* CacheIsKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D75C231C57CE1400F4E62D /* CacheIsKing.framework */; };
+		30D75C271C57CE1400F4E62D /* CacheCreek.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D75C261C57CE1400F4E62D /* CacheCreek.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30D75C2E1C57CEC500F4E62D /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C2D1C57CEC500F4E62D /* LRUCache.swift */; };
+		30D75C371C57D17400F4E62D /* CacheCreek.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D75C361C57D17400F4E62D /* CacheCreek.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30D75C3C1C57D1A300F4E62D /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C2D1C57CEC500F4E62D /* LRUCache.swift */; };
+		30D75C461C57D2CA00F4E62D /* CacheCreek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D75C231C57CE1400F4E62D /* CacheCreek.framework */; };
 		30D75C4D1C57F1C800F4E62D /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C4C1C57F1C800F4E62D /* AnyKey.swift */; };
 		30D75C4E1C58033B00F4E62D /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D75C4C1C57F1C800F4E62D /* AnyKey.swift */; };
+		7BC24BAC1D5C432200B1C208 /* LRUCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC24BAB1D5C432200B1C208 /* LRUCacheTests.swift */; };
+		7BC24BAF1D5C54E300B1C208 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC24BAD1D5C462100B1C208 /* DoublyLinkedList.swift */; };
+		7BC24BB01D5C54E300B1C208 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC24BAD1D5C462100B1C208 /* DoublyLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,22 +25,23 @@
 			containerPortal = 30D75C181C57CD6100F4E62D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 30D75C221C57CE1400F4E62D;
-			remoteInfo = "CacheIsKing-iOS";
+			remoteInfo = "CacheCreek-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		30D75C231C57CE1400F4E62D /* CacheIsKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheIsKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D75C261C57CE1400F4E62D /* CacheIsKing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheIsKing.h; sourceTree = "<group>"; };
+		30D75C231C57CE1400F4E62D /* CacheCreek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheCreek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D75C261C57CE1400F4E62D /* CacheCreek.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCreek.h; sourceTree = "<group>"; };
 		30D75C281C57CE1400F4E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30D75C2D1C57CEC500F4E62D /* KingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingCache.swift; sourceTree = "<group>"; };
-		30D75C341C57D17400F4E62D /* CacheIsKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheIsKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D75C361C57D17400F4E62D /* CacheIsKing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheIsKing.h; sourceTree = "<group>"; };
+		30D75C2D1C57CEC500F4E62D /* LRUCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
+		30D75C341C57D17400F4E62D /* CacheCreek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheCreek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D75C361C57D17400F4E62D /* CacheCreek.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCreek.h; sourceTree = "<group>"; };
 		30D75C381C57D17400F4E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30D75C411C57D2CA00F4E62D /* CacheIsKingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheIsKingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D75C431C57D2CA00F4E62D /* CacheIsKingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheIsKingTests.swift; sourceTree = "<group>"; };
+		30D75C411C57D2CA00F4E62D /* CacheCreekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheCreekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D75C451C57D2CA00F4E62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D75C4C1C57F1C800F4E62D /* AnyKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyKey.swift; sourceTree = "<group>"; };
+		7BC24BAB1D5C432200B1C208 /* LRUCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRUCacheTests.swift; sourceTree = "<group>"; };
+		7BC24BAD1D5C462100B1C208 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D75C461C57D2CA00F4E62D /* CacheIsKing.framework in Frameworks */,
+				30D75C461C57D2CA00F4E62D /* CacheCreek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				30D75C2C1C57CEB600F4E62D /* Source */,
-				30D75C251C57CE1400F4E62D /* CacheIsKing-iOS */,
-				30D75C351C57D17400F4E62D /* CacheIsKing-tvOS */,
-				30D75C421C57D2CA00F4E62D /* CacheIsKingTests */,
+				30D75C251C57CE1400F4E62D /* CacheCreek-iOS */,
+				30D75C351C57D17400F4E62D /* CacheCreek-tvOS */,
+				30D75C421C57D2CA00F4E62D /* CacheCreekTests */,
 				30D75C241C57CE1400F4E62D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,47 +84,48 @@
 		30D75C241C57CE1400F4E62D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30D75C231C57CE1400F4E62D /* CacheIsKing.framework */,
-				30D75C341C57D17400F4E62D /* CacheIsKing.framework */,
-				30D75C411C57D2CA00F4E62D /* CacheIsKingTests.xctest */,
+				30D75C231C57CE1400F4E62D /* CacheCreek.framework */,
+				30D75C341C57D17400F4E62D /* CacheCreek.framework */,
+				30D75C411C57D2CA00F4E62D /* CacheCreekTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30D75C251C57CE1400F4E62D /* CacheIsKing-iOS */ = {
+		30D75C251C57CE1400F4E62D /* CacheCreek-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				30D75C261C57CE1400F4E62D /* CacheIsKing.h */,
+				30D75C261C57CE1400F4E62D /* CacheCreek.h */,
 				30D75C281C57CE1400F4E62D /* Info.plist */,
 			);
-			path = "CacheIsKing-iOS";
+			path = "CacheCreek-iOS";
 			sourceTree = "<group>";
 		};
 		30D75C2C1C57CEB600F4E62D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				30D75C2D1C57CEC500F4E62D /* KingCache.swift */,
 				30D75C4C1C57F1C800F4E62D /* AnyKey.swift */,
+				7BC24BAD1D5C462100B1C208 /* DoublyLinkedList.swift */,
+				30D75C2D1C57CEC500F4E62D /* LRUCache.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		30D75C351C57D17400F4E62D /* CacheIsKing-tvOS */ = {
+		30D75C351C57D17400F4E62D /* CacheCreek-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				30D75C361C57D17400F4E62D /* CacheIsKing.h */,
+				30D75C361C57D17400F4E62D /* CacheCreek.h */,
 				30D75C381C57D17400F4E62D /* Info.plist */,
 			);
-			path = "CacheIsKing-tvOS";
+			path = "CacheCreek-tvOS";
 			sourceTree = "<group>";
 		};
-		30D75C421C57D2CA00F4E62D /* CacheIsKingTests */ = {
+		30D75C421C57D2CA00F4E62D /* CacheCreekTests */ = {
 			isa = PBXGroup;
 			children = (
-				30D75C431C57D2CA00F4E62D /* CacheIsKingTests.swift */,
+				7BC24BAB1D5C432200B1C208 /* LRUCacheTests.swift */,
 				30D75C451C57D2CA00F4E62D /* Info.plist */,
 			);
-			path = CacheIsKingTests;
+			path = CacheCreekTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +135,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D75C271C57CE1400F4E62D /* CacheIsKing.h in Headers */,
+				30D75C271C57CE1400F4E62D /* CacheCreek.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,16 +143,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D75C371C57D17400F4E62D /* CacheIsKing.h in Headers */,
+				30D75C371C57D17400F4E62D /* CacheCreek.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		30D75C221C57CE1400F4E62D /* CacheIsKing-iOS */ = {
+		30D75C221C57CE1400F4E62D /* CacheCreek-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30D75C291C57CE1400F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKing-iOS" */;
+			buildConfigurationList = 30D75C291C57CE1400F4E62D /* Build configuration list for PBXNativeTarget "CacheCreek-iOS" */;
 			buildPhases = (
 				30D75C1E1C57CE1400F4E62D /* Sources */,
 				30D75C1F1C57CE1400F4E62D /* Frameworks */,
@@ -159,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = "CacheIsKing-iOS";
-			productName = "CacheIsKing-iOS";
-			productReference = 30D75C231C57CE1400F4E62D /* CacheIsKing.framework */;
+			name = "CacheCreek-iOS";
+			productName = "CacheCreek-iOS";
+			productReference = 30D75C231C57CE1400F4E62D /* CacheCreek.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		30D75C331C57D17400F4E62D /* CacheIsKing-tvOS */ = {
+		30D75C331C57D17400F4E62D /* CacheCreek-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30D75C391C57D17400F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKing-tvOS" */;
+			buildConfigurationList = 30D75C391C57D17400F4E62D /* Build configuration list for PBXNativeTarget "CacheCreek-tvOS" */;
 			buildPhases = (
 				30D75C2F1C57D17400F4E62D /* Sources */,
 				30D75C301C57D17400F4E62D /* Frameworks */,
@@ -177,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = "CacheIsKing-tvOS";
-			productName = "CacheIsKing-tvOS";
-			productReference = 30D75C341C57D17400F4E62D /* CacheIsKing.framework */;
+			name = "CacheCreek-tvOS";
+			productName = "CacheCreek-tvOS";
+			productReference = 30D75C341C57D17400F4E62D /* CacheCreek.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		30D75C401C57D2CA00F4E62D /* CacheIsKingTests */ = {
+		30D75C401C57D2CA00F4E62D /* CacheCreekTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30D75C491C57D2CA00F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKingTests" */;
+			buildConfigurationList = 30D75C491C57D2CA00F4E62D /* Build configuration list for PBXNativeTarget "CacheCreekTests" */;
 			buildPhases = (
 				30D75C3D1C57D2CA00F4E62D /* Sources */,
 				30D75C3E1C57D2CA00F4E62D /* Frameworks */,
@@ -195,9 +199,9 @@
 			dependencies = (
 				30D75C481C57D2CA00F4E62D /* PBXTargetDependency */,
 			);
-			name = CacheIsKingTests;
-			productName = CacheIsKingTests;
-			productReference = 30D75C411C57D2CA00F4E62D /* CacheIsKingTests.xctest */;
+			name = CacheCreekTests;
+			productName = CacheCreekTests;
+			productReference = 30D75C411C57D2CA00F4E62D /* CacheCreekTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				TargetAttributes = {
 					30D75C221C57CE1400F4E62D = {
 						CreatedOnToolsVersion = 7.2;
@@ -220,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30D75C1B1C57CD6100F4E62D /* Build configuration list for PBXProject "CacheIsKing" */;
+			buildConfigurationList = 30D75C1B1C57CD6100F4E62D /* Build configuration list for PBXProject "CacheCreek" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,9 +236,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30D75C221C57CE1400F4E62D /* CacheIsKing-iOS */,
-				30D75C331C57D17400F4E62D /* CacheIsKing-tvOS */,
-				30D75C401C57D2CA00F4E62D /* CacheIsKingTests */,
+				30D75C221C57CE1400F4E62D /* CacheCreek-iOS */,
+				30D75C331C57D17400F4E62D /* CacheCreek-tvOS */,
+				30D75C401C57D2CA00F4E62D /* CacheCreekTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D75C4D1C57F1C800F4E62D /* AnyKey.swift in Sources */,
-				30D75C2E1C57CEC500F4E62D /* KingCache.swift in Sources */,
+				7BC24BAF1D5C54E300B1C208 /* DoublyLinkedList.swift in Sources */,
+				30D75C2E1C57CEC500F4E62D /* LRUCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D75C4E1C58033B00F4E62D /* AnyKey.swift in Sources */,
-				30D75C3C1C57D1A300F4E62D /* KingCache.swift in Sources */,
+				7BC24BB01D5C54E300B1C208 /* DoublyLinkedList.swift in Sources */,
+				30D75C3C1C57D1A300F4E62D /* LRUCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D75C441C57D2CA00F4E62D /* CacheIsKingTests.swift in Sources */,
+				7BC24BAC1D5C432200B1C208 /* LRUCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +301,7 @@
 /* Begin PBXTargetDependency section */
 		30D75C481C57D2CA00F4E62D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30D75C221C57CE1400F4E62D /* CacheIsKing-iOS */;
+			target = 30D75C221C57CE1400F4E62D /* CacheCreek-iOS */;
 			targetProxy = 30D75C471C57D2CA00F4E62D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -304,6 +310,8 @@
 		30D75C1C1C57CD6100F4E62D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -354,14 +362,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CacheIsKing-iOS/Info.plist";
+				INFOPLIST_FILE = "CacheCreek-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheIsKing-iOS";
-				PRODUCT_NAME = CacheIsKing;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheCreek-iOS";
+				PRODUCT_NAME = CacheCreek;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -406,13 +414,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CacheIsKing-iOS/Info.plist";
+				INFOPLIST_FILE = "CacheCreek-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheIsKing-iOS";
-				PRODUCT_NAME = CacheIsKing;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheCreek-iOS";
+				PRODUCT_NAME = CacheCreek;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,13 +470,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CacheIsKing-tvOS/Info.plist";
+				INFOPLIST_FILE = "CacheCreek-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheIsKing-tvOS";
-				PRODUCT_NAME = CacheIsKing;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheCreek-tvOS";
+				PRODUCT_NAME = CacheCreek;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -513,12 +521,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CacheIsKing-tvOS/Info.plist";
+				INFOPLIST_FILE = "CacheCreek-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheIsKing-tvOS";
-				PRODUCT_NAME = CacheIsKing;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nuudles.CacheCreek-tvOS";
+				PRODUCT_NAME = CacheCreek;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -565,12 +573,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = CacheIsKingTests/Info.plist;
+				INFOPLIST_FILE = CacheCreekTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nuudles.CacheIsKingTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuudles.CacheCreekTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -607,11 +615,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = CacheIsKingTests/Info.plist;
+				INFOPLIST_FILE = CacheCreekTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nuudles.CacheIsKingTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuudles.CacheCreekTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -621,7 +629,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30D75C1B1C57CD6100F4E62D /* Build configuration list for PBXProject "CacheIsKing" */ = {
+		30D75C1B1C57CD6100F4E62D /* Build configuration list for PBXProject "CacheCreek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30D75C1C1C57CD6100F4E62D /* Debug */,
@@ -630,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30D75C291C57CE1400F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKing-iOS" */ = {
+		30D75C291C57CE1400F4E62D /* Build configuration list for PBXNativeTarget "CacheCreek-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30D75C2A1C57CE1400F4E62D /* Debug */,
@@ -639,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30D75C391C57D17400F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKing-tvOS" */ = {
+		30D75C391C57D17400F4E62D /* Build configuration list for PBXNativeTarget "CacheCreek-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30D75C3A1C57D17400F4E62D /* Debug */,
@@ -648,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30D75C491C57D2CA00F4E62D /* Build configuration list for PBXNativeTarget "CacheIsKingTests" */ = {
+		30D75C491C57D2CA00F4E62D /* Build configuration list for PBXNativeTarget "CacheCreekTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30D75C4A1C57D2CA00F4E62D /* Debug */,
