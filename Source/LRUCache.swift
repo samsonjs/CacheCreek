@@ -7,7 +7,7 @@
 //  Modified to use LRU eviction by Sami Samhuri on 2016-08-10.
 //
 
-import Foundation
+import UIKit
 
 /// `LRUCache` is an LRU cache that can hold anything, including Swift structs, enums, and values.
 /// It is designed to work similar to the `NSCache`, but with native Swift support.

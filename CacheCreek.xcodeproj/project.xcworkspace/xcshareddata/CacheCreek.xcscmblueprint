@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "949E2619AD9C70590D5C2B00C5D03CE3824EE763",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "643B3DC915360BBE488C9CC33DF04516EA01C6C3" : 0,
+    "949E2619AD9C70590D5C2B00C5D03CE3824EE763" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BB3C86DC-2757-463B-9957-C1F08638D390",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "643B3DC915360BBE488C9CC33DF04516EA01C6C3" : "..\/..",
+    "949E2619AD9C70590D5C2B00C5D03CE3824EE763" : "CacheCreek\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CacheCreek",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CacheCreek.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:samsonjs\/1SE.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "643B3DC915360BBE488C9CC33DF04516EA01C6C3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/samsonjs\/CacheCreek.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "949E2619AD9C70590D5C2B00C5D03CE3824EE763"
+    }
+  ]
+}

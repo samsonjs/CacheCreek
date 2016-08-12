@@ -38,6 +38,10 @@ struct AnyKey: Hashable {
 
     /// `Hashable` protocol conformance
     var hashValue: Int { return hashValueFunc() }
+
+    var description: String {
+        return "\(underlying)"
+    }
 }
 
 func ==(x: AnyKey, y: AnyKey) -> Bool {
