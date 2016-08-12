@@ -58,18 +58,15 @@ struct DoublyLinkedList {
     }
 
     mutating func remove(node node: Node) {
-        if let prev = node.prev {
-            prev.next = node.next
-        }
-        else {
+        if node === head {
             head = node.next
         }
-        if let next = node.next {
-            next.prev = node.prev
-        }
-        else {
+        if node === tail {
             tail = node.prev
         }
+
+        node.prev?.next = node.next
+        node.next?.prev = node.prev
         node.next = nil
         node.prev = nil
         count -= 1
