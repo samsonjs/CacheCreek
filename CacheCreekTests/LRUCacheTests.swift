@@ -54,41 +54,41 @@ class CacheCreekTests: XCTestCase {
 
         let floatKey: Float = 123.456
         cache.set(item: 123.456, forKey: floatKey)
-        XCTAssert(cache.item(forKey: floatKey) as Double? == .Some(123.456))
+        XCTAssert(cache.item(forKey: floatKey) as Double? == .some(123.456))
 
         cache[floatKey] = 456.789
         XCTAssert(cache.count == 1)
-        XCTAssert(cache[floatKey] as? Double == .Some(456.789))
+        XCTAssert(cache[floatKey] as? Double == .some(456.789))
 
         cache.set(item: "123.456", forKey: "123.456")
         XCTAssert(cache.count == 2)
-        XCTAssert(cache.item(forKey: "123.456") as String? == .Some("123.456"))
+        XCTAssert(cache.item(forKey: "123.456") as String? == .some("123.456"))
 
         let boolKey = true
         cache.set(item: true, forKey: boolKey)
         XCTAssert(cache.count == 3)
-        XCTAssert(cache.item(forKey: boolKey) as Bool? == .Some(true))
+        XCTAssert(cache.item(forKey: boolKey) as Bool? == .some(true))
 
         cache.removeItem(forKey: boolKey)
         XCTAssert(cache.count == 2)
-        XCTAssert(cache.item(forKey: boolKey) as Bool? == .None)
+        XCTAssert(cache.item(forKey: boolKey) as Bool? == .none)
     }
 
     func testSettingAndGettingEnum() {
         let cache = LRUCache()
-        cache["ABC"] = TestEnum.ABC
-        cache["DEF"] = TestEnum.DEF("BlahBlahBlah")
-        cache["GHI"] = TestEnum.GHI(-500)
+        cache["ABC"] = TestEnum.abc
+        cache["DEF"] = TestEnum.def("BlahBlahBlah")
+        cache["GHI"] = TestEnum.ghi(-500)
 
         guard let abc: TestEnum = cache.item(forKey: "ABC"),
-            def: TestEnum = cache.item(forKey: "DEF"),
-            ghi: TestEnum = cache.item(forKey: "GHI")
+            let def: TestEnum = cache.item(forKey: "DEF"),
+            let ghi: TestEnum = cache.item(forKey: "GHI")
             else {
                 XCTFail()
                 return
             }
         switch (abc, def, ghi) {
-        case (.ABC, .DEF(let stringValue), .GHI(let intValue)):
+        case (.abc, .def(let stringValue), .ghi(let intValue)):
             XCTAssert(stringValue == "BlahBlahBlah")
             XCTAssert(intValue == -500)
         default:
@@ -101,30 +101,30 @@ class CacheCreekTests: XCTestCase {
 
         // Int subscript
         cache[123] = 123
-        XCTAssert(cache[123] as? Int == .Some(123))
+        XCTAssert(cache[123] as? Int == .some(123))
         XCTAssert(cache.count == 1)
 
         cache[123] = nil
-        XCTAssert(cache[123] as? Int == .None)
+        XCTAssert(cache[123] as? Int == .none)
         XCTAssert(cache.count == 0)
 
         // String subscript
         cache["123"] = 123
-        XCTAssert(cache["123"] as? Int == .Some(123))
+        XCTAssert(cache["123"] as? Int == .some(123))
         XCTAssert(cache.count == 1)
 
         cache["123"] = nil
-        XCTAssert(cache["123"] as? Int == .None)
+        XCTAssert(cache["123"] as? Int == .none)
         XCTAssert(cache.count == 0)
 
         // Float subscript
         let floatKey: Float = 3.14
         cache[floatKey] = 123
-        XCTAssert(cache[floatKey] as? Int == .Some(123))
+        XCTAssert(cache[floatKey] as? Int == .some(123))
         XCTAssert(cache.count == 1)
         
         cache[floatKey] = nil
-        XCTAssert(cache[floatKey] as? Int == .None)
+        XCTAssert(cache[floatKey] as? Int == .none)
         XCTAssert(cache.count == 0)
     }
 
@@ -158,7 +158,7 @@ class CacheCreekTests: XCTestCase {
 
         XCTAssert(cache.count == 4)
 
-        NSNotificationCenter.defaultCenter().postNotificationName(UIApplicationDidReceiveMemoryWarningNotification, object: UIApplication.sharedApplication())
+        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: UIApplication.shared)
 
         XCTAssert(cache.count == 0)
 
@@ -169,7 +169,7 @@ class CacheCreekTests: XCTestCase {
 
         XCTAssert(cache.count == 4)
 
-        NSNotificationCenter.defaultCenter().postNotificationName(UIApplicationDidEnterBackgroundNotification, object: UIApplication.sharedApplication())
+        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidEnterBackground, object: UIApplication.shared)
 
         XCTAssert(cache.count == 0)
 
@@ -238,13 +238,14 @@ class CacheCreekTests: XCTestCase {
     func testObjCObjects() {
         let cache = LRUCache()
 
-        let oldCache = NSCache()
-        cache.set(item: oldCache, forKey: "InceptionCache")
+        let boxedInt = NSNumber(value: 42)
+        cache.set(item: boxedInt, forKey: "Answer")
 
-        guard let _: NSCache = cache.item(forKey: "InceptionCache") else {
-            XCTFail("Expected an NSCache object")
+        guard let answer: NSNumber = cache.item(forKey: "Answer") else {
+            XCTFail("Expected an NSNumber object")
             return
         }
+        XCTAssert(answer.intValue == 42)
     }
 }
 
@@ -254,7 +255,7 @@ private struct TestStruct {
 }
 
 private enum TestEnum {
-    case ABC
-    case DEF(String)
-    case GHI(Int)
+    case abc
+    case def(String)
+    case ghi(Int)
 }

@@ -9,17 +9,17 @@ struct DoublyLinkedList {
 
     typealias Node = DoublyLinkedListNode
 
-    private(set) var head: Node?
+    fileprivate(set) var head: Node?
 
-    private(set) var tail: Node?
+    fileprivate(set) var tail: Node?
 
-    private(set) var count = 0
+    fileprivate(set) var count = 0
 
     var isEmpty: Bool {
         return head == nil
     }
 
-    mutating func prepend(key key: AnyKey, value: Any) -> Node {
+    mutating func prepend(key: AnyKey, value: Any) -> Node {
         let node = Node(key: key, value: value)
         node.next = head
         head?.prev = node
@@ -31,7 +31,7 @@ struct DoublyLinkedList {
         return node
     }
 
-    mutating func append(key key: AnyKey, value: Any) -> Node {
+    mutating func append(key: AnyKey, value: Any) -> Node {
         let node = Node(key: key, value: value)
         node.prev = tail
         tail?.next = node
@@ -57,7 +57,7 @@ struct DoublyLinkedList {
         return nil
     }
 
-    mutating func remove(node node: Node) {
+    mutating func remove(node: Node) {
         if node === head {
             head = node.next
         }
@@ -72,9 +72,9 @@ struct DoublyLinkedList {
         count -= 1
     }
 
-    mutating func moveToHead(node node: Node) {
+    mutating func moveToHead(node: Node) {
         remove(node: node)
-        prepend(key: node.key, value: node.value)
+        let _ = prepend(key: node.key, value: node.value)
     }
 
 }

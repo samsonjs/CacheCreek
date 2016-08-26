@@ -12,16 +12,16 @@ import UIKit
 /// `LRUCache` is an LRU cache that can hold anything, including Swift structs, enums, and values.
 /// It is designed to work similar to the `NSCache`, but with native Swift support.
 ///
-public class LRUCache {
+public final class LRUCache {
     // MARK: - Private variables
     /// An array of `NSNotificationCenter` observers that need to be removed upon deinitialization
-    private var notificationObservers: [NSObjectProtocol] = []
+    fileprivate var notificationObservers: [NSObjectProtocol] = []
 
     /// The list of cached items. Most recently used item at head, least recently used item at tail.
-    private var items: DoublyLinkedList = DoublyLinkedList()
+    fileprivate var items: DoublyLinkedList = DoublyLinkedList()
 
     /// Maps keys of cached items to nodes in the linked list.
-    private var keyToNodeMap: [AnyKey:DoublyLinkedListNode] = [:]
+    fileprivate var keyToNodeMap: [AnyKey:DoublyLinkedListNode] = [:]
 
     // MARK: - Public variables
     /// The number of items in the cache.
@@ -39,27 +39,27 @@ public class LRUCache {
 
     // MARK: - Initialization methods
     public init() {
-        let removalBlock = { [unowned self] (_: NSNotification) in
+        let removalBlock = { [unowned self] (_: Notification) in
             self.removeAllItems()
         }
 
-        var notificationObserver = NSNotificationCenter.defaultCenter()
-            .addObserverForName(UIApplicationDidReceiveMemoryWarningNotification,
-                object: UIApplication.sharedApplication(),
+        var notificationObserver = NotificationCenter.default
+            .addObserver(forName: NSNotification.Name.UIApplicationDidReceiveMemoryWarning,
+                object: UIApplication.shared,
                 queue: nil,
-                usingBlock: removalBlock)
+                using: removalBlock)
         notificationObservers.append(notificationObserver)
-        notificationObserver = NSNotificationCenter.defaultCenter()
-            .addObserverForName(UIApplicationDidEnterBackgroundNotification,
-                object: UIApplication.sharedApplication(),
+        notificationObserver = NotificationCenter.default
+            .addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground,
+                object: UIApplication.shared,
                 queue: nil,
-                usingBlock: removalBlock)
+                using: removalBlock)
         notificationObservers.append(notificationObserver)
     }
 
     deinit {
         notificationObservers.forEach {
-            NSNotificationCenter.defaultCenter().removeObserver($0)
+            NotificationCenter.default.removeObserver($0)
         }
     }
 
@@ -81,7 +81,7 @@ public class LRUCache {
     /// - parameter item: The item to be cached
     /// - parameter key: The key with which to cache the item
     ///
-    public func set<K: Hashable>(item item: Any, forKey key: K) {
+    public func set<K: Hashable>(item: Any, forKey key: K) {
         let key = AnyKey(key)
         if let existingNode = keyToNodeMap[key] {
             items.remove(node: existingNode)
