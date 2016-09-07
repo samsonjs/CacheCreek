@@ -4,6 +4,8 @@
 
 `CacheCreek` provides an an LRU cache that allows you to store any item, including objects, pure Swift structs, enums (with associated values), etc. Simply put, it's designed to act like an `NSCache` for everything, including Swift variables.
 
+![Swift version 3.0](https://img.shields.io/badge/Swift-3.0-brightgreen.svg?style=flat)] ![version 0.2.0 on Carthage](https://img.shields.io/badge/Carthage-0.2.0-brightgreen.svg?style=flat) [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://sjs.mit-license.org)
+
 ## Features
 
 - Simply set, get, and remove items based on any key that is `Hashable`
@@ -18,28 +20,6 @@
 - iOS 8.0+
 - tvOS 9.0+
 - Xcode 7+
-
-## Installation using CocoaPods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
-
-Because `CacheCreek` is written in Swift, you must use frameworks.
-
-To integrate `CacheCreek` into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'CacheCreek'
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
 
 ## Installation using Carthage
 
@@ -93,4 +73,6 @@ print("\(cache.count)") // shows a count of 2
 
 # License
 
-[MIT License](https://sjs.mit-license.org)
+Copyright (c) 2015 Christopher Luu [MIT License](https://github.com/nuudles/CacheIsKing/blob/f93527d8ccc3f88b2e0697e9fd78be28d40a3a26/LICENSE)
+
+Copyright &copy; 2016 Sami Samhuri  [MIT License](https://sjs.mit-license.org)
